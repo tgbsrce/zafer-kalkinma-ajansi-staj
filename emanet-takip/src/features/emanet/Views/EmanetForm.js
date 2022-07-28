@@ -4,8 +4,7 @@ import { addValue, deleteValue, getList } from "../Slices/emanetSlice";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-export default function EmanetForm() {
-  const itemList = useSelector(getList);
+export default function EmanetForm(props) {
   const dispatch = useDispatch();
   function createGuid() {
     function S4() {
@@ -30,7 +29,7 @@ export default function EmanetForm() {
     Id: createGuid(),
     PersonName: "",
     ItemName: "",
-    CreateTime:` ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
+    CreateTime: ` ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
   };
   const [emanetState, setEmanetState] = useState(intialItem);
   const handleChange = (event) => {
@@ -45,7 +44,7 @@ export default function EmanetForm() {
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3 mt-5">
+        <Form.Group className="mb-3">
           <Form.Label>Emaneti alan kişi:</Form.Label>
           <Form.Control
             placeholder="Lütfen adınızı giriniz."
@@ -64,10 +63,15 @@ export default function EmanetForm() {
             value={emanetState.ItemName}
           />
         </Form.Group>
+        <div className="emanet-footer">
+          <Button variant="secondary" onClick={props.onHide}>
+            Kapat
+          </Button>
+          <Button variant="primary" type="submit" className="ms-2">
+            Kaydet
+          </Button>
+        </div>
 
-        <Button variant="secondary" type="submit">
-          Kaydet
-        </Button>
       </Form>
     </>
   );

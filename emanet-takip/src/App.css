@@ -2,3 +2,8 @@
 .nav-image{
     width:100%;
 }
+
+.emanet-footer{
+    display: flex;
+    justify-content: flex-end
+}

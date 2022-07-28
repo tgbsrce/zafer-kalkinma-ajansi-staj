@@ -8,9 +8,7 @@ export default function EmanetList() {
   console.log(itemList);
   const dispatch = useDispatch();
   return (
-    <>
-      <>
-        <div className="mt-5"></div>
+    <>           
         <Table striped bordered hover responsive>
           <thead>
             <tr>
@@ -32,7 +30,6 @@ export default function EmanetList() {
               })}
           </tbody>
         </Table>
-      </>
-    </>
+      </>   
   );
 }
