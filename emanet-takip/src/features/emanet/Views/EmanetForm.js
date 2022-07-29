@@ -54,6 +54,8 @@ export default function EmanetForm(props) {
           />
         </Form.Group>
 
+
+
         <Form.Group className="mb-3">
           <Form.Label>Emanet alınan malzeme:</Form.Label>
           <Form.Control
