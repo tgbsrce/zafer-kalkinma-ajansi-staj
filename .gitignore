@@ -2,6 +2,7 @@
 
 # dependencies
 /emanet-takip/node_modules
+/zeka-app/node_modules
 /node_modules
 /.pnp
 .pnp.js
