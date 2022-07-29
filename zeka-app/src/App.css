@@ -1,9 +1,9 @@
 
 .nav-image{
-  width:100%;
+    width:100%;
 }
 
 .emanet-footer{
-  display: flex;
-  justify-content: flex-end
+    display: flex;
+    justify-content: flex-end
 }
