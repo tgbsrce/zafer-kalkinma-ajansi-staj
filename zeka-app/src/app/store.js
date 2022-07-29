@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import emanetReducer from '../features/emanet/Slices/emanetSlice';
-// import planbiReducer from '../features/planbi/Slices/planbiSlice';
+import planBiReducer from '../features/planBi/Slices/planBiSlice';
 
 
 
 export const store = configureStore({
   reducer: {
-    // planbi: planbiReducer,
+    planBi: planBiReducer,
     emanet: emanetReducer,
   },
 });
