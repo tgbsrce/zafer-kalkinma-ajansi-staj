@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addValue, deleteValue, getList } from "../Slices/PlanBiSlice";
 import Table from "react-bootstrap/Table";
 
 export default function PlanBiList() {
-  const itemList = useSelector(state=>state.planbi);
+  const itemList = useSelector(state=>state.planBi);
   console.log(itemList);
   const dispatch = useDispatch();
   return (

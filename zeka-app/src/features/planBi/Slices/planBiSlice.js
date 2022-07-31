@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export const PlanBiSlice = createSlice({
-  name: "planbi",
+  name: "planBi",
   initialState:initialState,
   reducers: {
     addValue: (state, action) => {
@@ -21,5 +21,5 @@ export const PlanBiSlice = createSlice({
 });
 export const { addValue, deleteValue } = PlanBiSlice.actions;
 
-export const getList = (state) => state.planbi.value;
+export const getList = (state) => state.planBi.value;
 export default PlanBiSlice.reducer;

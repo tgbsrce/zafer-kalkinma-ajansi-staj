@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addValue, deleteValue, getList } from "../Slices/PlanBiSlice";
+import { addValue, deleteValue, getList } from "../Slices/planBiSlice";
+
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -35,14 +36,14 @@ export default function PlanBiForm(props) {
     Description:"",
     
   };
-  const [planbiState, setPlanbiState] = useState(intialItem);
+  const [planBiState, setPlanbiState] = useState(intialItem);
   const handleChange = (event) => {
-    setPlanbiState({ ...planbiState, [event.target.name]: event.target.value });
+    setPlanbiState({ ...planBiState, [event.target.name]: event.target.value });
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addValue(planbiState));
-    console.log(planbiState);
+    dispatch(addValue(planBiState));
+    console.log(planBiState);
     setPlanbiState(intialItem);
   };
   return (
@@ -54,7 +55,7 @@ export default function PlanBiForm(props) {
             placeholder="Lütfen ip/adres giriniz."
             name="IpAdress"
             onChange={handleChange}
-            value={planbiState.IpAdress}
+            value={planBiState.IpAdress}
           />
         </Form.Group>
 
@@ -64,7 +65,7 @@ export default function PlanBiForm(props) {
             placeholder="Lütfen sunucu adını giriniz."
             name="ServerName"
             onChange={handleChange}
-            value={planbiState.ServerName}
+            value={planBiState.ServerName}
           />
         </Form.Group>
 
@@ -74,7 +75,7 @@ export default function PlanBiForm(props) {
             placeholder="Lütfen kullanıcı adını giriniz."
             name="UserName"
             onChange={handleChange}
-            value={planbiState.UserName}
+            value={planBiState.UserName}
           />
         </Form.Group>
 
@@ -84,7 +85,7 @@ export default function PlanBiForm(props) {
             placeholder="Lütfen parolayı  giriniz."
             name="Password"
             onChange={handleChange}
-            value={planbiState.Password}
+            value={planBiState.Password}
           />
         </Form.Group>
 
@@ -94,11 +95,11 @@ export default function PlanBiForm(props) {
             placeholder="Lütfen açıklama giriniz."
             name="Description"
             onChange={handleChange}
-            value={planbiState.Description}
+            value={planBiState.Description}
           />
         </Form.Group>
     
-        <div className="planbi-footer">
+        <div className="planBi-footer">
           <Button variant="secondary" onClick={props.onHide}>
             Kapat
           </Button>
